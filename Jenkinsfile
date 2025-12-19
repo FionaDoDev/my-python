@@ -5,13 +5,13 @@ pipeline {
     }
   }
 
-  //stages {
-    //stage('Checkout from Git') {
-      //steps {
-        //git branch: 'calcul',
-          //  url: 'https://github.com/FionaDoDev/my-python.git'
-      //}
-    //}
+  stages {
+    stage('Checkout from Git') {
+      steps {
+        git branch: 'calcul',
+            url: 'https://github.com/FionaDoDev/my-python.git'
+      }
+    }
 
     stage('Run pytest') {
       steps {
